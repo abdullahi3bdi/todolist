@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventToDoList">
+
+    <TextView
+        android:id="@+id/eventTaskList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/list_of_tasks"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <RelativeLayout
+        android:layout_width="388dp"
+        android:layout_height="648dp"
+        android:padding="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventTaskList"
+        app:layout_constraintVertical_bias="0.232">
+
+        <CheckBox
+            android:id="@+id/todoCheckBox"
+            android:layout_width="217dp"
+            android:layout_height="59dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginBottom="570dp"
+            android:buttonTint="@color/primary"
+            android:minHeight="48dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:text="Buy balloons" />
+
+        <EditText
+            android:id="@+id/newTaskText"
+            android:layout_width="219dp"
+            android:layout_height="78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="241dp"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="323dp"
+            android:background="@null"
+            android:hint="@string/new_task"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColorHint="#546E7A" />
+
+        <Button
+            android:id="@+id/newTaskButton"
+            android:layout_width="93dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="91dp"
+            android:layout_marginTop="553dp"
+            android:layout_marginEnd="134dp"
+            android:layout_marginBottom="3dp"
+            android:background="@android:color/transparent"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="#546E7A"
+            android:textSize="16sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasksRecyclerView"
+            android:layout_width="236dp"
+            android:layout_height="169dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginBottom="401dp"
+            android:nestedScrollingEnabled="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="62dp"
+            android:layout_height="58dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="283dp"
+            android:layout_marginTop="538dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="44dp"
+            android:backgroundTint="@color/primary_dark"
+            android:contentDescription="@string/fab"
+            android:src="@drawable/ic_baseline_add_32"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
